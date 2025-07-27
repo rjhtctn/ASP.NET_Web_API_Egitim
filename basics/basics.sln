@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api_egitim_ui", "api_egitim_ui\api_egitim_ui.csproj", "{1A98A6CD-AD87-4343-8361-13893E029A8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api_egitim_cli", "api_egitim_cli\api_egitim_cli.csproj", "{14EF4DA4-BFF0-3454-AB68-153613A23345}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgitimAPI", "EgitimAPI\EgitimAPI.csproj", "{1924C74B-C9C6-450F-99CC-806844D94816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductApp", "ProductApp\ProductApp.csproj", "{8DA0C08F-074E-494C-B471-F35B0B3D8F88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Çözüm Öğeleri", "Çözüm Öğeleri", "{AC80F682-3D55-C8F8-4895-A4A9EDD49434}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A98A6CD-AD87-4343-8361-13893E029A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A98A6CD-AD87-4343-8361-13893E029A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A98A6CD-AD87-4343-8361-13893E029A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A98A6CD-AD87-4343-8361-13893E029A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14EF4DA4-BFF0-3454-AB68-153613A23345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14EF4DA4-BFF0-3454-AB68-153613A23345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14EF4DA4-BFF0-3454-AB68-153613A23345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14EF4DA4-BFF0-3454-AB68-153613A23345}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1924C74B-C9C6-450F-99CC-806844D94816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1924C74B-C9C6-450F-99CC-806844D94816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1924C74B-C9C6-450F-99CC-806844D94816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1924C74B-C9C6-450F-99CC-806844D94816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA0C08F-074E-494C-B471-F35B0B3D8F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA0C08F-074E-494C-B471-F35B0B3D8F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA0C08F-074E-494C-B471-F35B0B3D8F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA0C08F-074E-494C-B471-F35B0B3D8F88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A20B767-4B63-499F-92F2-88EC5C86482D}
+	EndGlobalSection
+EndGlobal
