@@ -35,4 +35,12 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - Global & koleksiyon (collection) değişkenleri tanımlama  
   - Pre-request ve test script’leri yazma  
   - Random/faker fonksiyonları ile dinamik veri oluşturma  
-  - Koleksiyon runner ile otomatik test çalıştırma  
+  - Koleksiyon runner ile otomatik test çalıştırma
+
+## 6. Entity Framework Core
+  - `DbContext` tanımlama  
+  - Bağlantı dizesi (connection string) konfigürasyonu  
+  - EF Core Migrations: veri tabanı şema yönetimi  
+  - Tip konfigürasyonu (Fluent API & Data Annotations)  
+  - Inversion of Control: Repository’lerin ve `DbContext`’in DI ile kaydı  
+  - Veri manipülasyonu: LINQ sorguları, ekleme, güncelleme, silme    
