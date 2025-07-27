@@ -28,3 +28,12 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - `[ApiController]` ve `[Route]` kullanımı  
   - GET, POST, PUT, PATCH, DELETE endpoint’leri  
   - Model validation ve HTTP status kodları  
+
+## 5. Postman ile API Testleri  
+- **Öğrenilenler:**  
+  - Postman arayüzü ve temel kavramlar  
+  - Tüm HTTP yöntemlerini (GET, POST, PUT, DELETE, PATCH) test etme  
+  - Global & koleksiyon (collection) değişkenleri tanımlama  
+  - Pre-request ve test script’leri yazma  
+  - Random/faker fonksiyonları ile dinamik veri oluşturma  
+  - Koleksiyon runner ile otomatik test çalıştırma  

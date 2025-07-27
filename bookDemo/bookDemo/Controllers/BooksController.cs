@@ -37,7 +37,7 @@ namespace bookDemo.Controllers
                 if (book == null) return BadRequest();
 
                 ApplicationContext.Books.Add(book);
-                return StatusCode(200, book);
+                return StatusCode(201, book);
             }
             catch
             (Exception ex)
