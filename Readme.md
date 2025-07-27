@@ -1,11 +1,30 @@
-# ASP.NET Core API Eğitim Notları
+# ASP.NET Core Web API Eğitimi
 
-Bu repository, API ve ASP.NET Core konularında temel kavramları, pratik kullanım örneklerini ve loglama yapılandırmasını kapsayan kişisel eğitim notlarımı içerir.
+Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim bölümlerinin kısa özeti ve öğrendiğim başlıkları içerir.
 
-- API'nin temelleri, HTTP ve REST mantığı hakkında temel bilgiler edindim.
-- ASP.NET Core ile Web API projesi oluşturmayı, ortam değişkenleriyle çalışmayı ve proje şablonlarını öğrendim.
-- Uygulama üzerinde loglama mekanizmasını kurarak, appsettings.json ile yapılandırmanın nasıl yapıldığını ve Dependency Injection kavramını pratikte uyguladım.
-- Proje dosyalarında hem teorik özetler hem de küçük örnekler yer almakta.
+---
 
-> **Amaç:** Kendi öğrenme sürecimi kayda almak, tekrar ihtiyaç duyduğumda kolayca göz atmak ve temelden profesyonel API geliştirmeye doğru sağlam bir temel oluşturmak.
+## 1. API Temelleri   
+  - API kavramı ve kullanım senaryoları  
+  - HTTP protokolü (istemci-sunucu modeli, stateless yapı)  
+  - RESTful prensipleri ve kaynak temelli tasarım  
+  - Komut satırı ile `curl` kullanarak istek gönderme  
 
+## 2. ASP.NET Core Altyapısı  
+  - `dotnet new webapi` proje şablonu  
+  - `launchSettings.json` ve ortam değişkenleri (Development/Production)  
+  - Dependency Injection (servis kaydı, `builder.Services`)  
+  - Swagger/OpenAPI entegrasyonu ile otomatik dokümantasyon  
+
+## 3. Logging   
+  - `ILogger<T>` ile yerleşik loglama  
+  - Log seviyeleri (Information, Warning, Error …)  
+  - `appsettings.json` ile log konfigürasyonu  
+  - Controller içine log enjekte etme  
+
+## 4. Modeller ile Çalışma (CRUD)    
+  - POCO model sınıfları (örn. `Book`)  
+  - in-memory örnekleri  
+  - `[ApiController]` ve `[Route]` kullanımı  
+  - GET, POST, PUT, PATCH, DELETE endpoint’leri  
+  - Model validation ve HTTP status kodları  

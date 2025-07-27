@@ -14,8 +14,8 @@ namespace bookDemo.Controllers
             return Ok(books);
         }
 
-        [HttpGet("id:int")]
-        public IActionResult GetOneBook(int id)
+        [HttpGet("{id:int}")]
+        public IActionResult GetOneBook([FromRoute(Name = "id")]int id)
         {
             var book = ApplicationContext.Books.Where(b => b.Id.Equals(id))
                 .SingleOrDefault();
