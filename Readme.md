@@ -43,4 +43,21 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - EF Core Migrations: veri tabanı şema yönetimi  
   - Tip konfigürasyonu (Fluent API & Data Annotations)  
   - Inversion of Control: Repository’lerin ve `DbContext`’in DI ile kaydı  
-  - Veri manipülasyonu: LINQ sorguları, ekleme, güncelleme, silme    
+  - Veri manipülasyonu: LINQ sorguları, ekleme, güncelleme, silme  
+
+## 7. Katmanlı Mimari  
+  - Katmanlı mimari prensipleri ve katmanların sorumlulukları  
+  - **Entities** (varlık/model sınıfları)  
+  - **IRepositoryBase**: generic repository arayüzü  
+  - **RepositoryContext**: `DbContext`’in sarmalanması  
+  - **RepositoryBase**: temel CRUD implementasyonu  
+  - **BookRepository**: özel repository örneği  
+  - **RepositoryManager**: birden fazla repository’i yönetme  
+  - **Lazy Loading** konfigürasyonu  
+  - **Service Extensions** ile servis kayıtlarının modülerleştirilmesi  
+  - **Configure Repository Manager** yöntemi  
+  - **IBookService** ve **IServiceManager** arayüzleri  
+  - **ServiceManager** IoC kaydı ve kullanımı  
+  - **Sunum Katmanı** (Presentation Layer) yapısı  
+  - **RepositoryContextFactory**: context factory oluşturma    
+
