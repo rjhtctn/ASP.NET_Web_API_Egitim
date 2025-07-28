@@ -61,3 +61,10 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - **Sunum Katmanı** (Presentation Layer) yapısı  
   - **RepositoryContextFactory**: context factory oluşturma    
 
+## 8. NLog ile Gelişmiş Logging  
+  - NLog kütüphanesinin tanıtımı ve avantajları  
+  - **ILoggingService** arayüzü: log soyutlaması  
+  - **LoggerManager** sınıfı: `ILoggerService` implementasyonu  
+  - `nlog.config` ile hedef (targets) ve kural (rules) yapılandırması  
+  - Mimariye NLog entegrasyonu: DI ve extension metotları  
+  - Log seviyeleri ve çıktı formatlarının özelleştirilmesi
