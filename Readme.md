@@ -68,3 +68,10 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - `nlog.config` ile hedef (targets) ve kural (rules) yapılandırması  
   - Mimariye NLog entegrasyonu: DI ve extension metotları  
   - Log seviyeleri ve çıktı formatlarının özelleştirilmesi
+
+## 9. Global Hata Yönetimi  
+  - Merkezi hata yakalama (Exception Middleware)  
+  - Hata detayları (Error Details) DTO yapısı  
+  - `UseExceptionHandler` ve özel exception handler sınıfları  
+  - Try/catch bloklarını minimalize ederek temiz kod  
+  - NotFoundException gibi özel exception’lar  
