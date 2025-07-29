@@ -89,3 +89,12 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - `[Serializable]` veya DataContract/DataMember kullanımı  
   - CSV Output Formatter ile özelleştirilmiş CSV çıktısı  
   - Built-in ve custom formatters kayıt yöntemleri  
+
+## 12. Doğrulama (Validation)  
+  - `ApiBehaviorOptions` ile otomatik model state kontrolü  
+  - Service katmanının validation mantığının düzenlenmesi  
+  - Sunum (Presentation) katmanında model doğrulama akışı  
+  - **POST** isteklerinde `[FromBody]` ve veri anotasyonları (`[Required]`, `[Range]` vb.)  
+  - **PUT** isteklerinde tam güncelleme validation senaryoları  
+  - **PATCH** isteklerinde kısmi güncelleme ve JSON Patch doğrulama  
+  - Global model state hatalarının standart response formatına dönüştürülmesi  
