@@ -82,3 +82,10 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - `MappingProfile` sınıfı ile eşlemeleri konfigüre etme  
   - DI ile AutoMapper servis kaydı (`services.AddAutoMapper(...)`)  
   - `IMapper.Map<TDestination>(source)` kullanımı  
+
+## 11. İçerik Pazarlığı (Content Negotiation)  
+  - `Accept` header ile istemci isteği yönlendirme  
+  - XML Data Contract Serializer ekleme (`AddXmlDataContractSerializerFormatters()`)  
+  - `[Serializable]` veya DataContract/DataMember kullanımı  
+  - CSV Output Formatter ile özelleştirilmiş CSV çıktısı  
+  - Built-in ve custom formatters kayıt yöntemleri  
