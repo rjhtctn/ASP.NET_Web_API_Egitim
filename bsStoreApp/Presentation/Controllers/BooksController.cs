@@ -1,6 +1,4 @@
 ﻿using Entities.DataTransferObjects;
-using Entities.Exceptions;
-using Entities.Models;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
@@ -32,13 +30,17 @@ namespace Presentation.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateOneBook([FromBody] Book book)
+        public IActionResult CreateOneBook([FromBody] BookDtoForInsertion bookDto)
         {
-                if (book is null)
+                if (bookDto is null)
                 {
                     return BadRequest();
                 }
-                _manager.BookService.CreateOneBook(book);
+            if (!ModelState.IsValid)
+            {
+                return UnprocessableEntity(ModelState);
+            }
+                var book = _manager.BookService.CreateOneBook(bookDto);
                 return StatusCode(201, book);
         }
 
@@ -50,7 +52,11 @@ namespace Presentation.Controllers
                 {
                     return BadRequest();
                 }
-                _manager.BookService.UpdateOneBook(id, bookDto, true);
+                if (!ModelState.IsValid)
+            {
+                return UnprocessableEntity(ModelState);
+            }
+                _manager.BookService.UpdateOneBook(id, bookDto, false);
                 return NoContent();
         }
 
@@ -63,16 +69,21 @@ namespace Presentation.Controllers
 
         [HttpPatch("{id:int}")]
         public IActionResult PartiallyUpdateOneBook([FromRoute(Name = "id")] int id,
-            [FromBody] JsonPatchDocument<Book> bookPatch)
+            [FromBody] JsonPatchDocument<BookDtoForUptade> bookPatch)
         {
-                var entity = _manager.BookService
-                    .GetOneBookById(id, true);
-                bookPatch.ApplyTo(entity);
-                _manager.BookService.UpdateOneBook(id, new BookDtoForUptade(
-                    entity.Id,
-                    entity.Title,
-                    entity.Price), true);
-                return NoContent();
+            if (bookPatch is null)
+            {
+                return BadRequest();
+            }
+            var result = _manager.BookService.GetOnBookForPatch(id, false);
+            bookPatch.ApplyTo(result.bookDtoForUptade, ModelState);
+            TryValidateModel(result.bookDtoForUptade);
+            if (!ModelState.IsValid)
+            {
+                return UnprocessableEntity(ModelState);
+            }
+            _manager.BookService.SaveChangesForPatch(result.bookDtoForUptade, result.book);
+            return NoContent();
         }
     }
 }
