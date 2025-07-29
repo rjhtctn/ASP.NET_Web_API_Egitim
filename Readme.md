@@ -75,3 +75,10 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - `UseExceptionHandler` ve özel exception handler sınıfları  
   - Try/catch bloklarını minimalize ederek temiz kod  
   - NotFoundException gibi özel exception’lar  
+
+## 10. AutoMapper  
+  - AutoMapper nedir ve kullanım amaçları  
+  - Data Transfer Objects (DTO) tanımlama  
+  - `MappingProfile` sınıfı ile eşlemeleri konfigüre etme  
+  - DI ile AutoMapper servis kaydı (`services.AddAutoMapper(...)`)  
+  - `IMapper.Map<TDestination>(source)` kullanımı  
