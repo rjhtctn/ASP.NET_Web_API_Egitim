@@ -12,7 +12,13 @@ namespace WebApi
 
             LogManager.Setup().LoadConfigurationFromFile(String.Concat(Directory.GetCurrentDirectory(),"/nlog.config"));
 
-            builder.Services.AddControllers()
+            builder.Services.AddControllers(config =>
+            {
+                config.RespectBrowserAcceptHeader = true;
+                config.ReturnHttpNotAcceptable = true;
+            })
+                .AddCustomCsvFormatter()
+                .AddXmlDataContractSerializerFormatters()
                 .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly)
                 .AddNewtonsoftJson();
             builder.Services.AddEndpointsApiExplorer();
