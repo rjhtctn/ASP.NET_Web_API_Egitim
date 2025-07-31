@@ -97,4 +97,11 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - **POST** isteklerinde `[FromBody]` ve veri anotasyonları (`[Required]`, `[Range]` vb.)  
   - **PUT** isteklerinde tam güncelleme validation senaryoları  
   - **PATCH** isteklerinde kısmi güncelleme ve JSON Patch doğrulama  
-  - Global model state hatalarının standart response formatına dönüştürülmesi  
+  - Global model state hatalarının standart response formatına dönüştürülmesi
+
+## 13. Asenkron Kod  
+  - `async`/`await` temelleri ve Task tabanlı programlama  
+  - Repository katmanında `GetAllAsync()`, `GetByIdAsync()` gibi asenkron metotlar  
+  - Servis katmanında async çağrı zinciri  
+  - Controller’da `public async Task<IActionResult>` endpoint tanımlama  
+  - API testlerinde async metot kullanımı ve test senaryoları    
