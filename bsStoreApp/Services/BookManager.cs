@@ -2,6 +2,7 @@
 using Entities.DataTransferObjects;
 using Entities.Exceptions;
 using Entities.Models;
+using Entities.RequestFeatures;
 using Repositories.Contracts;
 using Services.Contracts;
 
@@ -10,11 +11,13 @@ namespace Services
     public class BookManager : IBookService
     {
         private readonly IRepositoryManager _manager;
+        private readonly ILoggerService _logger;
         private readonly IMapper _mapper;
-        public BookManager(IRepositoryManager manager, IMapper mapper)
+        public BookManager(IRepositoryManager manager, ILoggerService logger, IMapper mapper)
         {
             _manager = manager;
             _mapper = mapper;
+            _logger = logger;
         }
 
         public async Task<BookDto> CreateOneBookAsync(BookDtoForInsertion bookDto)
@@ -32,10 +35,11 @@ namespace Services
             await _manager.SaveAsync();
         }
 
-        public async Task<IEnumerable<BookDto>> GetAllBooksAsync(bool trackChanges)
+        public async Task<(IEnumerable<BookDto> books, MetaData metaData)> GetAllBooksAsync(BookParameters bookParameters, bool trackChanges)
         {
-            var books = await _manager.Book.GetAllBooksAsync(trackChanges);
-            return _mapper.Map<IEnumerable<BookDto>>(books);
+            var booksWithMetaData = await _manager.Book.GetAllBooksAsync(bookParameters, trackChanges);
+            var booksDto = _mapper.Map<IEnumerable<BookDto>>(booksWithMetaData);
+            return (booksDto, booksWithMetaData.Metadata);
         }
 
         public async Task<(BookDtoForUptade bookDtoForUptade, Book book)> 

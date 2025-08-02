@@ -35,6 +35,7 @@ namespace WebApi
             builder.Services.ConfigureLoggerService();
             builder.Services.AddAutoMapper(typeof(Program));
             builder.Services.ConfigureActionFilters();
+            builder.Services.ConfigureCors();
 
             var app = builder.Build();
 
@@ -53,6 +54,8 @@ namespace WebApi
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 
