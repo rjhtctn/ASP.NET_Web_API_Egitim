@@ -106,10 +106,19 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - Controller’da `public async Task<IActionResult>` endpoint tanımlama  
   - API testlerinde async metot kullanımı ve test senaryoları  
 
-14. Eylem Filtreleri (Action Filters)
+## 14. Eylem Filtreleri (Action Filters)
   - Action Filter kavramı, ASP.NET Core pipeline'daki yeri ve amacı
   - Tekrarlı kodları önlemek için özel filtre attribute'ları oluşturma (örn. ValidationFilterAttribute)
   - Loglama işlemleri için özel bir LogFilterAttribute yazımı
   - Controller ve servis katmanlarındaki kodun filtreler yardımıyla sadeleştirilmesi  
+
+## 15. Sayfalama (Pagination)
+  - Büyük veri setlerini yönetmek için sayfalama (paging) ihtiyacı
+  - İstek parametrelerini (RequestParameters) modelleme ve yönetme
+  - Repository ve servis katmanlarında sayfalama mantığının uygulanması
+  - PagedList<T> sınıfı ile sayfalanmış veri ve metadata'yı birlikte taşıma
+  - Yanıt başlıklarına (Response Headers) sayfalama bilgisini (X-Pagination) ekleme
+  - Sunum (Presentation) katmanında ve API testlerinde sayfalama kullanımı
+  - CORS (Cross-Origin Resource Sharing) yapılandırması ve API'yi farklı kaynaklardan erişilebilir kılma
 
 
