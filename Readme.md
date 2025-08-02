@@ -104,4 +104,12 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - Repository katmanında `GetAllAsync()`, `GetByIdAsync()` gibi asenkron metotlar  
   - Servis katmanında async çağrı zinciri  
   - Controller’da `public async Task<IActionResult>` endpoint tanımlama  
-  - API testlerinde async metot kullanımı ve test senaryoları    
+  - API testlerinde async metot kullanımı ve test senaryoları  
+
+14. Eylem Filtreleri (Action Filters)
+  - Action Filter kavramı, ASP.NET Core pipeline'daki yeri ve amacı
+  - Tekrarlı kodları önlemek için özel filtre attribute'ları oluşturma (örn. ValidationFilterAttribute)
+  - Loglama işlemleri için özel bir LogFilterAttribute yazımı
+  - Controller ve servis katmanlarındaki kodun filtreler yardımıyla sadeleştirilmesi  
+
+
