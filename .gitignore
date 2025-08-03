@@ -33,6 +33,8 @@ TestResults/
 Logs/
 log/
 logs/
+logs/*.txt
+logs/**/*.txt
 *.svclog
 
 *.nupkg

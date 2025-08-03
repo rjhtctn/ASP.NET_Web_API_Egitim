@@ -127,5 +127,5 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - Geçersiz filtre aralıkları için özel hata fırlatma ve merkezi yönetim (Bad Request Exception)
   - Repository katmanında IQueryable kullanarak dinamik Where koşulları ile filtre uygulama
   - Filtreleme mantığını soyutlamak için Repository extension metotları yazma
-
+  - Postman ile filtreleme testi
 
