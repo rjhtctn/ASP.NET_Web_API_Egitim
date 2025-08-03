@@ -5,7 +5,7 @@ using Entities.RequestFeatures;
 
 namespace Repositories.EFCore
 {
-    public class BookRepository : RepositoryBase<Book>, IBookRepository
+    public sealed class BookRepository : RepositoryBase<Book>, IBookRepository
     {
         public BookRepository(RepositoryContext context) : base(context)
         {
@@ -17,8 +17,10 @@ namespace Repositories.EFCore
             bool trackChanges)
         {
             var books = await FindAll(trackChanges)
-            .OrderBy(b => b.Id)
-            .ToListAsync();
+                .FilterBooks(bookParemeters.MinPrice, bookParemeters.MaxPrice)
+                .OrderBy(b => b.Id)
+                .ToListAsync();
+
             return PagedList<Book>.ToPagedList(books,bookParemeters.PageNumber, bookParemeters.PageSize);
         }
         public async Task<Book> GetOneBookByIdAsync(int id, bool trackChanges) => 
