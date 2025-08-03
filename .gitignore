@@ -35,6 +35,7 @@ log/
 logs/
 logs/*.txt
 logs/**/*.txt
+/WebApi/internal logs/
 *.svclog
 
 *.nupkg

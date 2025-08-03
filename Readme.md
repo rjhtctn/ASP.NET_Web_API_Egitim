@@ -129,3 +129,20 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - Filtreleme mantığını soyutlamak için Repository extension metotları yazma
   - Postman ile filtreleme testi
 
+## 17. Arama (Searching)
+  - Metin tabanlı arama (searching) ve API'lerdeki rolü
+  - İstek parametrelerine arama terimi (searchTerm) ekleme
+  - Repository katmanında string.Contains() gibi metotlarla dinamik arama yapma
+  - Büyük/küçük harf duyarlılığını (case sensitivity) yönetme
+  - Arama mantığını soyutlamak ve yeniden kullanılabilir kılmak için Repository extension metotları tasarlama
+  - Postman ile arama senaryolarının test edilmesi
+
+## 18. Sıralama (Sorting)
+  - Query string üzerinden dinamik sıralama (sorting) yapma ihtiyacı
+  - System.Linq.Dynamic.Core kütüphanesi ile metin tabanlı LINQ sorguları oluşturma
+  - Sıralama parametrelerini (orderBy=fieldName asc, ...) ayrıştıran ve doğrulayan bir yardımcı (OrderQueryBuilder) sınıfı geliştirme
+  - IQueryable<T> üzerinde çalışan yeniden kullanılabilir bir Sort extension metodu yazma
+  - Postman ile tekli ve çoklu alanlara göre sıralama senaryolarının test edilmesi
+
+	
+
