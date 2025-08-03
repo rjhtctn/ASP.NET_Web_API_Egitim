@@ -121,4 +121,11 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - Sunum (Presentation) katmanında ve API testlerinde sayfalama kullanımı
   - CORS (Cross-Origin Resource Sharing) yapılandırması ve API'yi farklı kaynaklardan erişilebilir kılma
 
+## 16. Filtreleme (Filtering)
+  - Dinamik filtreleme kavramı
+  - Sayfalama parametrelerini genişleterek filtreleme kriterleri ekleme (örn. BookParameters)
+  - Geçersiz filtre aralıkları için özel hata fırlatma ve merkezi yönetim (Bad Request Exception)
+  - Repository katmanında IQueryable kullanarak dinamik Where koşulları ile filtre uygulama
+  - Filtreleme mantığını soyutlamak için Repository extension metotları yazma
+
 
