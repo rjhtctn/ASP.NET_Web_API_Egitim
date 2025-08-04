@@ -144,5 +144,14 @@ Bu depo, ASP.NET Core ile Web API geliştirme sürecinde tamamladığım eğitim
   - IQueryable<T> üzerinde çalışan yeniden kullanılabilir bir Sort extension metodu yazma
   - Postman ile tekli ve çoklu alanlara göre sıralama senaryolarının test edilmesi
 
+## 19. Veri Şekillendirme (Data Shaping)
+  - Veri şekillendirme (Data Shaping) nedir ve API performansına etkileri
+  - İstemcinin fields query string parametresi ile sadece istediği alanları talep etmesi
+  - IDataShaper<T> ve DataShaper<T> implementasyonu ile veri şekillendirme mantığını tasarlama
+  - Reflection (PropertyInfo) kullanarak nesne özelliklerine çalışma zamanında (runtime) erişme
+  - ExpandoObject ile dinamik tipler oluşturma ve yanıt nesnesini şekillendirme
+  - IDataShaper servisinin Dependency Injection (DI) ile kaydedilmesi
+  - Postman ile farklı fields kombinasyonlarını test etme
+
 	
 
